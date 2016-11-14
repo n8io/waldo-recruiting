@@ -1,0 +1,48 @@
+{
+  "name": "waldo-recruiting",
+  "version": "1.0.0",
+  "description": "A simple node app to read Exif data from an image url and persist it to a Mongo db instance.",
+  "author": "Nate Clark <n8@n8io.com>",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/n8io/waldo-recruiting.git"
+  },
+  "homepage": "https://github.com/n8io/waldo-recruiting",
+  "engines": {
+    "node": "^6",
+    "npm": "^3",
+    "yarn": "^0.16"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "babel -d ./dist ./src --source-maps --ignore node_modules,dist,coverage,.nyc_output",
+    "lint": "eslint ./**/*.js --quiet",
+    "start": "node dist",
+    "prepublish": "npm run lint && npm run build"
+  },
+  "dependencies": {
+    "bluebird": "^3",
+    "dotenv-safe": "^3",
+    "exif": "^0",
+    "file-type": "^3",
+    "mongodb": "^2",
+    "request": "^2",
+    "s3": "^4",
+    "slug": "^0",
+    "source-map-support": "^0",
+    "xml2js": "^0"
+  },
+  "devDependencies": {
+    "babel": "^6",
+    "babel-cli": "^6",
+    "babel-core": "^6",
+    "babel-eslint": "^4",
+    "babel-preset-es2015": "^6",
+    "babel-register": "^6",
+    "chalk": "^1",
+    "eslint": "^3",
+    "eslint-config-n8io": "^1",
+    "debug": "^2"
+  }
+}
